@@ -15,9 +15,13 @@ Table of Contents:
 (1) MATLAB_GET_EER_Binary_Search.m - Main Program
 (2) QuickDistance.m - Function to compute similarity scores
 (3) fastAUC.m - Function to perform a tradition ROC analysis in memory for smaller datasets (N<= 10,000).
-see:  https://www.mathworks.com/matlabcentral/fileexchange/42860-fast-auc-calculator-and-roc-curve-plotter
+see:  
+
+https://www.mathworks.com/matlabcentral/fileexchange/42860-fast-auc-calculator-and-roc-curve-plotter
+
 (4) autoArrangeFigures.m - Function to tile figures on a display.  See: 
 https://www.mathworks.com/matlabcentral/fileexchange/48480-automatically-arrange-figure-windows
+
 (5) ..\InputData\ (Practice Data):
 
 'Band_6_NFeat_010_NumberOfSubjects_00001000.csv';% 1,000 Subjects, 10 Features
