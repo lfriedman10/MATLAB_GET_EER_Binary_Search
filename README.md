@@ -2,7 +2,7 @@
 
 Performs a Binary Search approach to estimate the Equal Error Rate (EER) for very large biometric databases. It was created by Lee Friedman, Ph.D. following a similar Python program yet to be uploaded to GitHub by Mr. Vladyslav Prokopenko.  It is not an exact copy and it has completely different stopping conditions.
 
-It is posted and available in support of this submitted article 
+It is posted and available in support of this submitted article:
 
 Lee Friedman, Hal S. Stern, Vladyslav Prokopenko and Oleg V. Komogorthsev (Submitted, July 2019).
 Relationship between Number of Subjects and Biometric Authentication Equal Error Rates
