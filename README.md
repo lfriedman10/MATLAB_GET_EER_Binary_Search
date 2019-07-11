@@ -8,7 +8,7 @@ Lee Friedman, Hal S. Stern, Vladyslav Prokopenko and Oleg V. Komogorthsev (Submi
 Relationship between Number of Subjects and Biometric Authentication Equal Error Rates
 IEEE TRANSACTIONS ON BIOMETRICS, BEHAVIOR, AND IDENTITY SCIENCE, Submitted
 
-Description: This is a MATLAB script and associated MATLAB functions. It is designed to compute the Equal Error Rate (EER) for very large data sets, with numbers of subjects up to 100,000 or beyond.  Standard ROC analyses run in memory requires that all the similarity scores be held in memory.  With 100,000 (10^5) subjects, there are 10,000,000,000 (10^10) similarity scores.  These will not fit in the memory of many standard desktop computers.   This program solves that problem.
+Description: This is a MATLAB script and associated MATLAB functions. It is designed to compute the Equal Error Rate (EER) for very large data sets, with numbers of subjects up to 100,000 or beyond.  Standard ROC analyses run in memory requires that all the similarity scores be held in memory.  With 100,000 (10^5) subjects, there are 10,000,000,000 (10^10) similarity scores.  These will not fit in the memory of many standard desktop computers.   This program solves that problem.  If you have a GPU and you set GPU_TF=true (line 23), the program will use the GPU.  If you don't want to use the GPU, set GPU_TF=false.
 
 
 Table of Contents: 
