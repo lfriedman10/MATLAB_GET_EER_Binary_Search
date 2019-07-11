@@ -56,7 +56,7 @@ FileName='Band_6_NFeat_010_NumberOfSubjects_00010000.csv';%10,000 Subjects
 %
 % Also included are:
 % FileName='Band_6_NFeat_010_NumberOfSubjects_00001000.csv';%1,000 Subjects
-FileName='Band_6_NFeat_010_NumberOfSubjects_00050000.csv';%50,000 Subjects
+% FileName='Band_6_NFeat_010_NumberOfSubjects_00050000.csv';%50,000 Subjects
 % Github is unhappy with larger files than this
 %
 
@@ -170,14 +170,32 @@ right=1.0;
 % Get the size of each batch. The number of similarity scores computed
 % for each batch is n_batch^2
 %
+% PLEASE NOTE: The batch size (n_batch) must be a divisor of the 
+% number of subjects with no remainder. i.e., mod(NumberOfSubjects,n_batch)
+% must equal zero
+%
 if NumberOfSubjects > 1e4
     n_batch=5000;
 elseif NumberOfSubjects == 1e4
-    n_batch=1000;
+    n_batch=1001;
 elseif NumberOfSubjects == 1e3
     n_batch=100;
 end
 %
+% Check if the size of each batch is proper divisor of the total number of
+% subjects
+%
+if mod(NumberOfSubjects,n_batch) ~= 0
+    fprintf('***************************************************************************************\n')
+    fprintf('***************************************************************************************\n')
+    fprintf('***************************************************************************************\n')
+    fprintf('\nCannot continue.  The batch size (n_batch) must be a divisor of the\nnumber of subjects with no remainder\n')
+    fprintf('The remainder for %d divided by %d is %f\n\n',NumberOfSubjects,n_batch,mod(NumberOfSubjects,n_batch))
+    fprintf('***************************************************************************************\n')
+    fprintf('***************************************************************************************\n')
+    fprintf('***************************************************************************************\n')
+    return
+end
 % Main Binary Search Loop
 %
 fprintf('\nStarting Binary Search Loop\n')
